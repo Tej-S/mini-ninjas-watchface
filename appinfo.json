@@ -1,0 +1,44 @@
+{
+    "appKeys": {
+        "KEY_CONDITIONS": 1,
+        "KEY_TEMPERATURE": 0
+    },
+    "capabilities": [
+        "location"
+    ],
+    "companyName": "besiix",
+    "longName": "Mini Ninjas",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/Mini Ninjas Thumbnail.png",
+                "menuIcon": true,
+                "name": "IMAGE_THUMBNAIL",
+                "type": "png"
+            },
+            {
+                "file": "fonts/bonzai.ttf",
+                "name": "FONT_BONZAI_26",
+                "type": "font"
+            },
+            {
+                "file": "fonts/bonzai.ttf",
+                "name": "FONT_BONZAI_48",
+                "type": "font"
+            },
+            {
+                "file": "images/background.png",
+                "name": "IMAGE_BACKGROUND",
+                "type": "png"
+            }
+        ]
+    },
+    "shortName": "Mini Ninjas",
+    "uuid": "6ccbb3b7-24cb-44b3-9e25-b892e43c1aae",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
