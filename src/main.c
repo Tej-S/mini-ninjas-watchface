@@ -19,20 +19,23 @@ static void update_time() {
     struct tm *tick_time = localtime(&temp);
     
     //Create a long-lived buffer
-    static char buffer[] = "00:00";
+    static char hours[] = "00:";
+    static char minutes[] = "00";
     
     //Write the current hours and minutes into the buffer
     if (clock_is_24h_style() == true) {
         //Use 24 hour format
-        strftime(buffer, sizeof("00:00"), "%H:%M", tick_time);
+        strftime(hours, sizeof("00:"), "%H:", tick_time);
     } else {
         //Use 12 hour format
-        strftime(buffer, sizeof("00:00"), "%I:%M", tick_time);
+        strftime(hours, sizeof("00:"), "%I:", tick_time);
     }
+    //Get minutes
+    strftime(minutes, sizeof("00"), "%M", tick_time);
     
     //Display this time on the TextLayer
-    text_layer_set_text(s_hour_layer, buffer);
-    text_layer_set_text(s_minute_layer, buffer);
+    text_layer_set_text(s_hour_layer, hours);
+    text_layer_set_text(s_minute_layer, minutes);
 }
 
 //==================== WINDOW LOAD ====================
