@@ -41,7 +41,7 @@ static void update_time() {
 //==================== WINDOW LOAD ====================
 static void main_window_load(Window *window) {
     //Create GFonts
-    s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BONZAI_48));
+    s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BONZAI_60));
     s_weather_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BONZAI_26));
     
     //Create GBitmap, then set to created BitmapLayer
@@ -51,23 +51,23 @@ static void main_window_load(Window *window) {
     layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_background_layer));
     
     //Create and setup hour TextLayer
-    s_hour_layer = text_layer_create(GRect(0, 0, 144, 50));
+    s_hour_layer = text_layer_create(GRect(90, -20, 60, 60));
     text_layer_set_background_color(s_hour_layer, GColorClear);
     text_layer_set_text_color(s_hour_layer, GColorBlack);
     text_layer_set_text(s_hour_layer, "00:");
     text_layer_set_font(s_hour_layer, s_time_font);
     
-    text_layer_set_text_alignment(s_hour_layer, GTextAlignmentRight);
+    text_layer_set_text_alignment(s_hour_layer, GTextAlignmentLeft);
     layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_hour_layer));
     
     //Create and setup minute TextLayer
-    s_minute_layer = text_layer_create(GRect(0, 50, 144, 50));
+    s_minute_layer = text_layer_create(GRect(90, 15, 60, 60));
     text_layer_set_background_color(s_minute_layer, GColorClear);
     text_layer_set_text_color(s_minute_layer, GColorBlack);
     text_layer_set_text(s_minute_layer, "00");
     text_layer_set_font(s_minute_layer, s_time_font);
     
-    text_layer_set_text_alignment(s_minute_layer, GTextAlignmentRight);
+    text_layer_set_text_alignment(s_minute_layer, GTextAlignmentLeft);
     layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_minute_layer));
     
     //Create and setup temperature TextLayer

@@ -18,13 +18,15 @@
                 "type": "png"
             },
             {
+                "compatibility": "2.7",
                 "file": "fonts/bonzai.ttf",
-                "name": "FONT_BONZAI_26",
+                "name": "FONT_BONZAI_60",
                 "type": "font"
             },
             {
+                "compatibility": "2.7",
                 "file": "fonts/bonzai.ttf",
-                "name": "FONT_BONZAI_48",
+                "name": "FONT_BONZAI_26",
                 "type": "font"
             },
             {
