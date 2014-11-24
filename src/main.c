@@ -51,7 +51,7 @@ static void main_window_load(Window *window) {
     layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_background_layer));
     
     //Create and setup hour TextLayer
-    s_hour_layer = text_layer_create(GRect(85, -20, 60, 60));
+    s_hour_layer = text_layer_create(GRect(83, -20, 70, 60));
     text_layer_set_background_color(s_hour_layer, GColorClear);
     text_layer_set_text_color(s_hour_layer, GColorBlack);
     text_layer_set_text(s_hour_layer, "00:");
@@ -61,7 +61,7 @@ static void main_window_load(Window *window) {
     layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_hour_layer));
     
     //Create and setup minute TextLayer
-    s_minute_layer = text_layer_create(GRect(85, 15, 60, 60));
+    s_minute_layer = text_layer_create(GRect(83, 15, 60, 60));
     text_layer_set_background_color(s_minute_layer, GColorClear);
     text_layer_set_text_color(s_minute_layer, GColorBlack);
     text_layer_set_text(s_minute_layer, "00");
@@ -74,7 +74,7 @@ static void main_window_load(Window *window) {
     s_weather_layer = text_layer_create(GRect(5, 138, 144, 30));
     text_layer_set_background_color(s_weather_layer, GColorClear);
     text_layer_set_text_color(s_weather_layer, GColorWhite);
-    text_layer_set_text(s_weather_layer, "Loading..."); 
+    text_layer_set_text(s_weather_layer, ""); 
     text_layer_set_font(s_weather_layer, s_weather_font);
     
     text_layer_set_text_alignment(s_weather_layer, GTextAlignmentLeft);
